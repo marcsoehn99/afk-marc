@@ -35,7 +35,7 @@ Writes `afk-tickets.sh` and `ralph-status.sh` into the current directory.
    ```bash
    ./afk-tickets.sh 20 <slug> --model grok-4.6
    ./afk-tickets.sh 20 <slug> --model grok-4.6 --thinking high
-   ./afk-tickets.sh 20 <slug> --provider openrouter --model qwen/qwen3.8-27b
+   ./afk-tickets.sh 20 <slug> --provider openrouter --model qwen/qwen3.8-27b --thinking high
    ```
 
    No extra flags = whatever `pi` uses by default.
