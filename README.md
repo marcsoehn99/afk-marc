@@ -32,16 +32,7 @@ Writes `afk-tickets.sh` and `ralph-status.sh` into the current directory.
 
 5. Review in a **new** session: `/code-review`
 
-## Other coding CLIs
-
-Default agent is `pi`. Override:
-
-```bash
-export RALPH_AGENT='claude -p'
-./afk-tickets.sh 20 <slug>
-```
-
-The command must accept a prompt as its last argument and print the model's text to stdout.
+The loop calls `pi`. That is the only CLI this repo has been run with.
 
 ## What the loop does
 

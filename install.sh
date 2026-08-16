@@ -19,4 +19,3 @@ echo "  $DEST/afk-tickets.sh"
 echo "  $DEST/ralph-status.sh"
 echo
 echo "Then: ./ralph-status.sh <slug> && ./afk-tickets.sh <N> <slug>"
-echo "Other CLI:  export RALPH_AGENT='claude -p'"

@@ -8,16 +8,11 @@ fi
 tickets=".scratch/$2/issues"
 spec=".scratch/$2/spec.md"
 
-# Override for another CLI, e.g.:
-#   export RALPH_AGENT='claude -p'
-RALPH_AGENT=${RALPH_AGENT:-'pi -p --no-session'}
-
 for ((i = 1; i <= $1; i++)); do
   echo "Durchlauf $i feature=$2"
 
   result=$(
-    # shellcheck disable=SC2086
-    $RALPH_AGENT "
+    pi -p --no-session "
 Tickets: $tickets
 Spec: $spec
 
