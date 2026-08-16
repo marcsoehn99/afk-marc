@@ -30,11 +30,12 @@ Writes `afk-tickets.sh` and `ralph-status.sh` into the current directory.
    ./afk-tickets.sh 20 <slug>
    ```
 
-   Extra arguments after the slug go to `pi` (model, thinking, …):
+   Extra arguments after the slug go to `pi` (provider, model, thinking, …):
 
    ```bash
    ./afk-tickets.sh 20 <slug> --model grok-4.6
    ./afk-tickets.sh 20 <slug> --model grok-4.6 --thinking high
+   ./afk-tickets.sh 20 <slug> --provider openrouter --model qwen/qwen3.8-27b
    ```
 
    No extra flags = whatever `pi` uses by default.
