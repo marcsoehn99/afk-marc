@@ -1,18 +1,22 @@
 #!/bin/bash
 
 if [ -z "$1" ] || [ -z "$2" ]; then
-  echo "Usage: $0 <iterations> <feature-slug>"
+  echo "Usage: $0 <iterations> <feature-slug> [pi flags...]"
   exit 1
 fi
 
-tickets=".scratch/$2/issues"
-spec=".scratch/$2/spec.md"
+iterations=$1
+slug=$2
+tickets=".scratch/$slug/issues"
+spec=".scratch/$slug/spec.md"
 
-for ((i = 1; i <= $1; i++)); do
-  echo "Durchlauf $i feature=$2"
+shift 2
+
+for ((i = 1; i <= iterations; i++)); do
+  echo "Durchlauf $i feature=$slug"
 
   result=$(
-    pi -p --no-session "
+    pi -p --no-session "$@" "
 Tickets: $tickets
 Spec: $spec
 

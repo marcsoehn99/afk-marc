@@ -30,6 +30,15 @@ Writes `afk-tickets.sh` and `ralph-status.sh` into the current directory.
    ./afk-tickets.sh 20 <slug>
    ```
 
+   Extra arguments after the slug go to `pi` (model, thinking, …):
+
+   ```bash
+   ./afk-tickets.sh 20 <slug> --model grok-4.6
+   ./afk-tickets.sh 20 <slug> --model grok-4.6 --thinking high
+   ```
+
+   No extra flags = whatever `pi` uses by default.
+
 5. Review in a **new** session: `/code-review`
 
 The loop calls `pi`. That is the only CLI this repo has been run with.
